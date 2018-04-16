@@ -1,12 +1,12 @@
 
-Main();
+main();
 
-function Main() {
+function main() {
 	var status;
 	do {
 		var num1 = getInputData('первое');
 		var num2 = getInputData('второе');
-		var result = getOperatuion(num1, num2);
+		var result = getOperation(num1, num2);
 		if (confirm('Хотите увидеть результат выполнения?')) {
 			alert(result + "\n\n" + 'Для повторного запуска калькулятора нажмите F5');
 			status = 0;
@@ -30,7 +30,7 @@ function getInputData(strCountTxt) {
 	return Number(num);
 }
 
-function getOperatuion(num1,num2) {
+function getOperation(num1,num2) {
 	do {
 		var status = 1;
 		var result = null;
