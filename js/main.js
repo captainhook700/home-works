@@ -1,58 +1,54 @@
 var num1,
-	num2,
-	result,
-	operation;
- /*есть переменные(которые выше) и должны
-	быть функции на каждое действие,
-	и я так понимаю что должна быть одна функция
-	в которой все остальные функции
-	выполняют свою работу, как то так? */
+    num2,
+    result,
+    operation;
+
 count();
-function count() {                 			 //тут запросы на числа и
-								   			 // и скорей всего тут же можно и 
-	var num1 = prompt('choose number1', '')  // проверить числа
-		
-	if (num1 != isNaN) {
-		alert('NO NUMBER')
-	} else if {
-		return (count);
-	} else if {						
-		var num2 = prompt('choose number2', '') // незнаю можно ли тут дальше
-	}											//корректно описать num2  или
-												// нужно отдельную функию создавать?
+function count() {
+    var num1 = getNumber('first');
+    var num2 = getNumber('second');
+    var operation = getOperation();
+    calculate(num1, num2, operation)
 }
 
- function getnum() {    // функция определяет введенное первое 
- 						//и второе число	
- 							// тут мне не понятно как и чем забрать
- 							// введенные чила
+function getNumber(word) {
+    var result;
 
- }
+    do {
+        result = +prompt('введите ' + word, '');
+    } while (!isNaN(result));
 
- function operation() { //проверка + - * и её вычесление
- 	switch (mark) {
-    case "*":
-      return num1 * num2;
-    case "+":                     //тут я не доконца разобрался с проверкой на 
-    							  //введенный оператор и опять таки чем и как его забрать
-      return num1 + num2;
-    case "-":
-      return num1 - num2;
-    case "/":
-      if (num2 !== 0) {
-        return num1 / num2;
-      } else {
-        return "не делится на нуль";
-      }
-  }
+    return result;
 }
- }
 
- function result() { 	//результат
+function getOperation() {
+    var result;
 
- }
+    do {
+        result = +prompt('введите операцию', '');
+    } while (checkOperation(result));
 
- 
- function checknum () {  // проверка на ввод числа или буквы
- 	 
+    return result;
+}
+
+function checkOperation(operation) {
+
+    return operation === '+' || operation === '-';
+}
+
+function calculate(num1, num2, mark) {
+    switch (mark) {
+   case "*":
+     return num1 * num2;
+   case "+":
+     return num1 + num2;
+   case "-":
+     return num1 - num2;
+   case "/":
+     if (num2 !== 0) {
+       return num1 / num2;
+     } else {
+       return "не делится на нуль";
+     }
  }
+}
