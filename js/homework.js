@@ -34,7 +34,7 @@ lastA = parent.lastElementChild.firstElementChild;
 lastA.style.cssText = 'color:red;'
 console.log(lastA);
 
-
+console.log('%cCount elements on page', 'font-weight:bold;');
 var counter = counterForElements(document.querySelector('.items-nav'),'li');
 console.log('Counter li in ul.items-nav:',counter);
 var counter = counterForElements(document.body,'ul');
