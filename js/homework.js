@@ -4,6 +4,7 @@ All Website Logo UI kit Photo App Design
 Написать функции для получения доступа к последнему пункту меню (App Design) различными способами:
 */
 //1. По id (2 способа)
+console.log('%c04-DOM модель', 'font-weight:bold;font-size:200%;');
 var LastA = document.getElementById('mobile');
 console.log(LastA);
 LastA = document.querySelector('#mobile');

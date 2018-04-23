@@ -58,7 +58,7 @@ var calc = {
 	}
 }
 
-
+console.log('%c03-КАЛЬКУЛЯТОР', 'font-weight:bold;font-size:200%;');
 console.log('%cTesting correct input data', 'font-weight:bold;');
 console.log('PLUS 1,2,3,4,5,6,7,8,9,10:',calc.plus(1,2,3,4,5,6,7,8,9,10));
 console.log('MINUS 1,2,3,4,5,6,7,8,9,10:',calc.minus(1,2,3,4,5,6,7,8,9,10));
