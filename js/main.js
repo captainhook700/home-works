@@ -1,54 +1,29 @@
-var num1,
-    num2,
-    result,
-    operation;
+	
+// mobile();
+(function lastelem() {
+	var idMobile = document.getElementById('mobile');
+		console.log( idMobile  );
+		style = idMobile.style;
 
-count();
-function count() {
-    var num1 = getNumber('first');
-    var num2 = getNumber('second');
-    var operation = getOperation();
-    calculate(num1, num2, operation)
-}
+			style.paddingLeft = '50px';
+	 		style.color = 'red';
+	 		style.backgroundColor = 'lightgrey';
+	 		style.textDecoration = 'none';
+} )();
+	
+(function item() {
+	var itemNav = document.getElementsByClassName( 'items-nav' );
+	
+	// var items = document.querySelectorAll('items-nav');
+	console.log( itemNav );
+} ) ();
 
-function getNumber(word) {
-    var result;
+(function tags() {
+	var tagsItem = document.getElementsByTagName( 'items-nav' );
 
-    do {
-        result = +prompt('введите ' + word, '');
-    } while (!isNaN(result));
+	// var items = document.querySelectorAll('items-nav');
+	console.log( tagsItem );
+} ) ();
 
-    return result;
-}
-
-function getOperation() {
-    var result;
-
-    do {
-        result = +prompt('введите операцию', '');
-    } while (checkOperation(result));
-
-    return result;
-}
-
-function checkOperation(operation) {
-
-    return operation === '+' || operation === '-';
-}
-
-function calculate(num1, num2, mark) {
-    switch (mark) {
-   case "*":
-     return num1 * num2;
-   case "+":
-     return num1 + num2;
-   case "-":
-     return num1 - num2;
-   case "/":
-     if (num2 !== 0) {
-       return num1 / num2;
-     } else {
-       return "не делится на нуль";
-     }
- }
-}
+// var tableElem = document.getElementById('age-table');
+// var elements = tableElem.getElementsByTagName('input');
