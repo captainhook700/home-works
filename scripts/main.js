@@ -35,3 +35,6 @@ if (res == true) {
             break;
         default :
             alert("не то");
+            break;
+    }
+}
