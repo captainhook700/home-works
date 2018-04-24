@@ -1,1 +1,8 @@
-var a = 1;
+function Menu(id) {
+    var menu = document.getElementById("menu_" + id).style;
+    if (menu.display == "none") {
+        menu.display = "block";
+    } else {
+        menu.display = "none";
+    }
+}

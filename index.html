@@ -1,10 +1,35 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
     <head>
-        <title>Test</title>
-        <meta charset="utf-8">
+            <meta charset="utf-8">
+            <title>z</title>
+            <link rel = "stylesheet" href = "css/style.css">
     </head>
     <body>
+        <div class = "menu_style">
+        <ul class = "ul_style">
+          <li onclick = "javascript:Menu('1')">О нас</li>
+          <ul id = "menu_1" style = "display:none;">
+                <li><a href = "#">Text 1.1</a></li>
+                <li><a href = "#">Text 1.2</a></li>
+          </ul>
+          <li onclick = "javascript:Menu('2')">Услуги</li>
+          <ul id = "menu_2" style = "display:none;">
+                <li><a href = "#">Text 2.1</a></li>
+                <li><a href = "#">Text 2.2</a></li>
+          </ul>
+          <li onclick = "javascript:Menu('3')">Портфолио</li>
+          <ul id = "menu_3" style = "display:none;">
+                <li><a href = "#">Text 3.1</a></li>
+                <li><a href = "#">Text 3.2</a></li>
+          </ul>
+          <li onclick = "javascript:Menu('4')">Контакты</li>
+          <ul id = "menu_4" style = "display:none;">
+                <li><a href = "#">Text 3.1</a></li>
+                <li><a href = "#">Text 3.2</a></li>
+          </ul>
+        </ul>    
+        </div>   
         <script src="scripts/main.js"></script>
     </body>
 </html>
