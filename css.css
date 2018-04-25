@@ -1,0 +1,27 @@
+ul{
+	list-style: none;
+}
+#click,
+#click1,
+#click2,
+#click3,
+#click4{
+	width: 300px;
+	padding: 10px;
+	border: 1px solid gray;
+	border-left: 6px solid red;
+	border-bottom-left-radius: 10px;
+	border-top-left-radius: 10px;
+	cursor: pointer;
+}
+#hidden,
+#hidden1,
+#hidden2,
+#hidden3,
+#hidden4{
+	display: none;
+	width: 300px;
+	widows: 300px;
+	padding: 10px;
+	border: 1px solid gray;
+}
