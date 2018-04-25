@@ -26,14 +26,25 @@
  	box-shadow: 0 0 5px rgba(0, 0, 0, 0.2), inset 0 0 50px rgba(0, 0, 0, 0.1);
 }
 
+.accordion + .panel {
+    height: 0;
+    padding: 0;
+    border: none;
+    padding: 0 20px;
+}
+
 .active{
 	background: lightblue;
 }
 
-.panel {
-	min-height: 100px;
-	padding: 20px;
-	border: 1px grey solid;
-	font-style: italic;
+.active + .panel {
+    height: 100px;
+    padding: 20px;
+    border: 1px grey solid;
+}
 
+.panel {
+    font-style: italic;
+    transition: all .3s ease-out;
+    overflow: hidden;
 }

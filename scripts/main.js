@@ -1,19 +1,23 @@
 var accordsClick = document.querySelector('#menu1').querySelectorAll('.accordion');
-for (var i=0; i<accordsClick.length; i++){
+
+for (var i = 0; i < accordsClick.length; i++){
 	accordsClick[i].addEventListener('click',openPanel);
 }
+
 accordsClick = document.querySelector('#menu2').querySelectorAll('.accordion');
-for (var i=0; i<accordsClick.length; i++){
+
+for (var i = 0; i < accordsClick.length; i++){
 	accordsClick[i].addEventListener('mouseenter',openPanel);
 }
 
-
-function openPanel() {
-	var allAccords = this.parentElement.querySelectorAll('.accordion');
+function openPanel(event) {
+    var allAccords = this.parentElement.querySelectorAll('.accordion');
+    
 	for (var i=0; i<allAccords.length; i++){
 	 	allAccords[i].classList.remove('active');
-	 	allAccords[i].nextElementSibling.setAttribute('hidden',true);
-	}
+	 	allAccords[i].nextElementSibling.style.height = '0';
+    }
+    
 	this.classList.add('active');
-	this.nextElementSibling.removeAttribute('hidden');
+	this.nextElementSibling.style.height = '100px';
 }
