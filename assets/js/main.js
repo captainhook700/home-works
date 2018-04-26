@@ -1,14 +1,25 @@
-var accordeon = document.querySelectorAll('a')[1];
+var element = document.getElementsByClassName('menu-item');
 
-accordeon.addEventListener('click', function() {
+for (var i = 0; i < element.length; i++) {
+	
+	element[i].addEventListener('click', function() {
+		
+		if (!(this.children[1].classList.toggle('acc'))) {
+			this.style.background='lightblue';
+		} else {
+			this.style.background='linear-gradient(to top, #e9e9e9, #fbfdfc)';
+		}
+		
+		var style = this.children[1].style;
+		
+		style.paddingLeft='25px';
+		style.fontSize='16px';
+		style.fontStyle='italic';
+		style.background='#f2f3f7';
+		style.lineHeight='100px';
+		style.borderTop='solid 1px #ccc';
+		style.color='#7a7a7a';
 
-  accordeon.style.background="#c8e0ec";
+	});
+}
 
-  var attribute = document.querySelector('li[hidden]');
-  attribute.removeAttribute("hidden");
-
-  var elStyles = document.querySelectorAll('li')[2].firstChild;
-  elStyles.innerHTML = 'Какой нибудь замечательный текст...';
-  elStyles.style.cssText = "line-height: 100px; font-size: 16px; text-align: left; font-style: italic; background: #f2f3f7;";
-
-});
