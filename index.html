@@ -1,10 +1,41 @@
 <!doctype html>
 <html>
     <head>
-        <title>Test</title>
+        <title>06-JuliFed</title>
         <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
     </head>
     <body>
-        <script src="scripts/main.js"></script>
+	    <div class="block">
+        	<button class="btn" id="btn1">Button 1</button>
+        	<div class="animation_block"></div>
+        </div>
+        <div class="block">
+	    <!--	<button type="checkbox" class="btn" id="btn2"> </button>  	 -->
+	    <input type="checkbox" id="onclick" >
+ 			<div id="btn2" class="btn">
+ 				<label class="click" for="onclick">Button 2</label>
+ 			</div>
+			<div class="animation_block"></div>
+        </div>
+        <div class="block">
+	    	<button class="btn" id="btn3">Button 3</button>
+        	<div class="animation_block"></div>
+        </div>
     </body>
 </html>
+<!--
+*Задание к занятию №6 ^^*
+Требуется реализовать 3 интерактивных блока, с поведением как у gif анимации.
+Условия:
+1. Все изменения и движения происходят плавно, никаких резких рывков и смен бэкграунда.
+2. Никакого JavaScript. То есть вообще никакого. Разрешается использовать исключительно HTML и CSS.
+
+Поведение блоков:
+Button 1 - при наведении опускаем ниже и поворачиваем на 45 градусов блок 1
+Button 2 - при клике опускаем блок 2, при повторном клике возвращаем блок 2 на место
+Button 3 - при зажатии кнопки мыши двигаем блок 3 вправо, при отпускании - возвращаем блок 3 на место
+
+eugene [9:24 PM]
+подсказка: у вас будут в разметке три блока, расположенные слева направо, каждый высотой в 100vh, блоки, которые вверху, должны располагаться в разметке после кнопок, расположенных внизу. Используйте псевдо-классы кнопок и селекторы `+ ~` для анимированных блоков, удачи :slightly_smiling_face: Можете усложнить анимацию, поиграться с  `@keyframes` и  `animation`.
+-->
