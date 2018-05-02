@@ -1,0 +1,90 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.main {
+  width: 100%;
+  height: 99vh;
+  margin: auto;
+  position: relative;
+}
+
+.btn {
+  width: 100px;
+  height: 100px;
+  border: 1px solid #ccc;
+  position: absolute;
+  bottom: -1px;
+  cursor: pointer;
+  font-family: monospace;
+  font-size: 16px;
+  color: #484848;
+  border-radius: 5px;
+  background-color: #fff;
+  transition: .5s;
+}
+
+.btn:before {
+  content: '';
+  display: block;
+  width: 100px;
+  height: 100px;
+  border: 1px solid #ccc;
+  position: absolute;
+  bottom: 82vh;
+  left: -1px;
+  border-radius: 5px;
+  box-sizing: border-box;
+  transform: rotate(0deg);
+  background-color: #fff;
+  transition: 2s;
+}
+
+.btn-1 {
+  left: 25%;
+}
+
+.btn-1:hover {
+  background-color: #ccc;
+  transition: .3s;
+}
+
+.btn-1:hover:before {
+  bottom: 300px;
+  transform: rotate(45deg);
+  background-color: lightskyblue;
+  transition: 2s;
+}
+
+.btn-2 {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.btn-2:active {
+  background-color: #ccc;
+  transition: .3s;
+}
+
+.btn-2:active:before {
+  bottom: 300px;
+  background-color: lightcoral;
+  transform: scale(1.5);
+  transition: 2s;
+}
+
+.btn-3 {
+  right: 25%;
+}
+
+.btn-3:focus {
+  background-color: #ccc;
+  transition: .3s;
+}
+
+.btn-3:focus:before {
+  background-color: palegreen;
+  margin-left: 100px;
+  transition: 2s;
+}
