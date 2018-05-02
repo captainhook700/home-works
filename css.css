@@ -1,0 +1,94 @@
+div{
+	height:120px;
+	width: 120px;
+	border: 1px solid black;
+	text-align: center;
+}
+a{position: relative;
+	top: 50px;
+	color: red
+}
+
+	
+
+.hover{
+	position: absolute;
+	left: 300px;
+	top: 0px;
+	transition-property: top,  transform, border;
+	transition-duration: 2s;
+	border: 2px solid lightgray;
+}
+.button{
+	-webkit-appearance:button;
+	position: absolute;
+	left: 300px;
+	bottom: 0px;
+	transition-property: background;
+	transition-duration: 1s;
+}
+.button:hover {
+	background: lightgray;
+}
+.button:hover + .hover{
+	top: 200px;
+	transform: rotateZ(130deg);
+	border: 2px solid black;
+}
+
+
+.hover1{
+	position: absolute;
+	left: 600px;
+	top: 0px;
+	transition-property: top. border;
+	transition-duration: 2s;
+	border: 2px solid lightgray;
+}
+.button1{
+	position: absolute;
+	left: 600px;
+	bottom: 0px;border: none;
+}
+.click{
+-webkit-appearance:button;
+	height:100%;
+	width: 100%;
+	border: none;
+}
+
+
+input:checked ~ .hover1{
+	top: 200px;
+	transform: scale(1.1,1.1);
+	border: 2px solid black;
+}
+input{
+	display: none;
+}
+
+
+
+.hover2{
+	position: absolute;
+	left: 900px;
+	top: 0px;
+	transition-property: left,background,border;
+	transition-duration: 2s;
+	border: 2px solid lightgray;
+}
+.button2{-webkit-appearance:button;
+	position: absolute;
+	left: 900px;
+	bottom: 0px;
+	cursor: none;
+	transition-property: background;
+	transition-duration: 1s;
+}
+.button2:active{
+	background: lightgray;
+}
+.button2:active + .hover2{
+	left: 1200px;
+	border: 2px solid black;
+}
