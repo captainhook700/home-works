@@ -1,0 +1,167 @@
+
+body {
+    margin: 50px;
+}
+
+.square1 {
+	width: 100px;
+	height: 100px;
+    order: -1;
+    
+}
+
+.ball1 {
+    filter: grayscale(100%);
+}
+.square11 {
+	width: 100px;
+	height: 100px;
+    order: -1;
+    
+}
+
+.square2 {
+	width: 100px;
+	height: 100px;
+    margin-top: 200px;
+    filter: brightness(50%);
+}
+
+.square22 {
+	width: 100px;
+	height: 100px;
+    margin-top: 200px; 
+    filter: brightness(50%);
+}
+.square111 {
+	width: 100px;
+	height: 100px;
+    order: -1;
+}
+
+.square222 {
+	width: 100px;
+	height: 100px;
+    margin-top: 200px; 
+    filter: brightness(50%);
+}
+
+.blocktop {
+	width: 100px;
+    height: 100px;
+    display: inline-flex;
+    float: left;  
+    margin-right: 150px;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: baseline;
+    align-content: flex-start;
+ } 
+
+.blockmiddle {
+	width: 100px;
+	height: 100px;
+    display: inline-flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: baseline;
+}
+
+.blockbottom {
+	width: 100px;
+	height: 100px;
+    display: inline-flex; 
+    margin-left: 150px;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: baseline;
+} 
+
+@keyframes first {
+  0% {
+
+    top: 50px;
+
+  }
+  100% {
+
+    top: 200px;
+    transform:rotate(45deg);
+  }
+} 
+
+@keyframes second {
+    0% {
+      top: 50px;
+    }
+    50% {
+      top: 150px;
+    }
+    100% {
+      top: 200px;
+    }
+  } 
+
+  @keyframes third {
+    0% {
+      left: 560px;
+      
+    }
+    25% {
+        left: 850px;
+      
+      }
+    50% {
+      left: 1150px;
+    
+    }
+    75% {
+        left: 1450px;
+      
+      }
+    100% {
+      left: 2050px;
+      
+    }
+  }
+
+.square2:hover ~ .square1 img {
+  animation: first 2s linear 0s infinite;
+  height: 100px;
+  position: absolute;
+  width: 100px;
+  filter: grayscale(0%);
+  
+}
+
+.square22:active ~ .square11 img {
+    animation: second 2s linear 0s;
+    animation-fill-mode: backwards;
+    height: 100px;
+    position: absolute;
+    width: 100px;
+    filter: grayscale(0%);
+  }
+
+.square222:active ~ .square111 img {
+    animation: third 2s linear 0s infinite;
+    height: 100px;
+    position: absolute;
+    width: 100px;
+    filter: grayscale(0%);
+  }
+
+.square2:hover {
+    filter: brightness(100%);
+  }
+
+  .square22:active {
+    filter: brightness(100%);
+  }
+
+  .square222:active {
+    filter: brightness(100%);
+  }
