@@ -6,7 +6,7 @@ $(window).ready(function() {
 });
 
 var $bodyTag = $('body');
-$bodyTag.prepend('<article>Press Enter to start.</article>');
+$bodyTag.prepend('<article>Press Enter to start</article>');
 
 var $articleTag = $('article');
 $articleTag.css({
@@ -35,7 +35,7 @@ function toStart(e) {
 
     $sectionTag.css({
       width: '80%',
-      height: '600px',
+      height: '500px',
       borderRadius: '5px',
       background: 'linear-gradient(to bottom, #f5f5f5, #cccccc)',
       margin: '20px auto',
@@ -76,7 +76,7 @@ function toStart(e) {
         position: 'absolute',
         opacity: '0.9',
         backgroundColor: '#' + String(randomSize(100000, 900000)),
-        top: randomSize(0, 75) + '%',
+        top: randomSize(0, 70) + '%',
         left: randomSize(0, 85) + '%'
       });
 
@@ -90,7 +90,7 @@ function toStart(e) {
 
         $(this).addClass('active');
 
-        $sectionTag.on('mousemove', function() {
+        $divTag.on('mousemove', function() {
           var newLeft = event.pageX - marginX;
           var newTop = event.pageY - marginY;
 
@@ -113,7 +113,7 @@ function toStart(e) {
         $divTag.on('mouseup', function() {
           $(this).removeClass('active');
           $(this).css('z-index', '1');
-          $sectionTag.off('mousemove');
+          $divTag.off('mousemove');
         });
       });
     }
