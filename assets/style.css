@@ -1,0 +1,31 @@
+.inputValid {
+    border: 1px solid #ced4da;
+}
+.inputInvalid {
+	border: 1px solid #ff0000 !important;
+}
+.img-title {
+	background: #000000; 
+	margin-bottom: 20px;
+}
+.img-title > img {
+	margin: auto;
+}
+ .requirements {
+    padding: 0 30px 0 50px;
+    color: #999;
+    max-height: 0;
+    transition: 0.28s;
+    overflow: hidden;
+    color: red;
+    font-style: italic;
+  }
+  .visibleRequirements {
+  	max-height: 200px; 
+  	padding: 0 30px 20px 50px;
+  }
+  input[type="submit"]{
+  	width: 20vw;
+  	float: right;
+  	margin-top: 30px;
+  }

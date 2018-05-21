@@ -1,10 +1,54 @@
 <!doctype html>
 <html>
     <head>
-        <title>Test</title>
+        <title>09-JuliFed</title>
         <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="assets/style.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous"> 
     </head>
     <body>
-        <script src="scripts/main.js"></script>
+        <div class="container">
+            <div class="row img-title">
+                <img src="data:image/png;base64,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">
+            </div>
+            <div class="row align-items-center">
+                <form class="col-12" novalidate>
+                  <div class="validation"></div>
+                  <div class="form-group row">
+                    <label for="email" class="col-sm-2 col-form-label">Email</label>
+                    <div class="col-sm-10">
+                      <input type="email" class="form-control" id="email" placeholder="Email" required>
+                      <div class="requirements"></div>
+                    </div>
+                  </div>
+                  <div class="validation"></div>
+                  <div class="form-group row">
+                    <label for="password" class="col-sm-2 col-form-label">Password</label>
+                    <div class="col-sm-10">
+                      <input type="password" class="form-control" id="password" placeholder="Password" required>
+                      <div class="requirements"></div>
+                    </div>
+                  </div>
+                  <div class="validation"></div>
+                  <div class="form-group row">
+                    <div class="validation"></div>
+                    <label for="confirm" class="col-sm-2 col-form-label">Confirm password</label>
+                    <div class="col-sm-10">
+                      <input type="password" class="form-control" id="confirm" placeholder="Confirm password" required>
+                      <div class="requirements"></div>
+                    </div>
+                  </div>
+
+                  <div class="form-group row align-items-center">
+                    <div class="col-sm-12">
+                      <input type="submit" class="btn btn-primary">
+                    </div>
+                  </div>
+                </form>
+            </div>
+            <div class="errors"></div>
+        </div>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script type="text/javascript" src="assets/script.js"></script>
     </body>
 </html>
