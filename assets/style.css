@@ -1,5 +1,5 @@
 .inputValid {
-    border: 1px solid #ced4da;
+    border: 1px solid #228B22 !important;
 }
 .inputInvalid {
 	border: 1px solid #ff0000 !important;
