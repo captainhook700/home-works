@@ -1,10 +1,294 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-    <head>
-        <title>Test</title>
-        <meta charset="utf-8">
-    </head>
-    <body>
-        <script src="scripts/main.js"></script>
-    </body>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<style type="text/css">
+		li{
+			list-style: none;
+			width: 100px;
+			border-bottom: 2px solid black;
+				}
+			.inline_list{
+				list-style: none;
+			}
+			.inline_list_main > li{
+				
+				width: 100px;
+				background: lightgray;
+				display: inline-block;
+				text-align: center;
+
+			}
+			.inline_list_main .inline_list_1{
+				position: absolute;
+				padding-left: 0px;
+				background: gray;
+				margin-top: 2px;
+			}
+			.inline_list_main .inline_list_1 .inline_list_2 {
+				position: absolute;
+				padding-left: 0px;
+				margin-top: -18px;
+
+				left: 80px;
+				background: lightgray;
+			}
+			
+			.inline_list_main .inline_list_1 .inline_list_2 .inline_list_3{
+				position: absolute;
+				padding-left: 0px;
+				margin-top: -18px;
+				left: 80px;
+				background: red;
+			}
+		</style>
+		<nav class="main">
+			<ul class="inline_list_main">
+				<li>
+					перечень
+					<ul class="inline_list_1" hidden>
+						<li>
+							1
+							<ul class="inline_list_2" hidden>
+								<li>
+										2
+								<ul class="inline_list_3" hidden>
+									<li>
+											3
+									
+									</li>
+									<li>
+											3
+									</li>
+									
+								</ul>
+								</li>
+								<li>
+										2
+										<ul class="inline_list_3" hidden>
+									<li>
+											3
+									
+									</li>
+									<li>
+											3
+									</li>
+									
+								</ul>
+								</li>
+								<li>
+										2
+										<ul class="inline_list_3" hidden>
+									<li>
+											3
+									
+									</li>
+									<li>
+											3
+									</li>
+									
+								</ul>
+								</li>
+							</ul>
+						</li>
+						<li>
+							1
+							<ul class="inline_list_2" hidden>
+								<li>
+										2
+										<ul class="inline_list_3" hidden>
+									<li>
+											3
+									
+									</li>
+									<li>
+											3
+									</li>
+									
+								</ul>
+								</li>
+								<li>
+										2
+										<ul class="inline_list_3" hidden>
+									<li>
+											3
+									
+									</li>
+									<li>
+											3
+									</li>
+									
+								</ul>
+								</li>
+								<li>
+										2
+										<ul class="inline_list_3" hidden>
+									<li>
+											3
+									
+									</li>
+									<li>
+											3
+									</li>
+									
+								</ul>
+								</li>
+							</ul>
+						</li>
+						
+						<li>
+							1
+							<ul class="inline_list_2" hidden>
+								<li>
+								2
+								<ul class="inline_list_3" hidden>
+									<li>
+											3
+									
+									</li>
+									<li>
+											3
+									</li>
+									
+								</ul>
+								</li>
+								<li>
+										2
+										<ul class="inline_list_3" hidden>
+									<li>
+											3
+									
+									</li>
+									<li>
+											3
+									</li>
+									
+								</ul>
+								</li>
+								<li>
+										2
+									<ul class="inline_list_3" hidden>
+										<li>
+												3
+										
+										</li>
+										<li>
+												3
+										</li>
+										
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li>
+							1
+							<li>
+							1
+							<ul class="inline_list_2" hidden>
+								<li>
+								2
+								<ul class="inline_list_3" hidden>
+									<li>
+											3
+									
+									</li>
+									<li>
+											3
+									</li>
+									
+								</ul>
+								</li>
+								<li>
+										2
+										<ul class="inline_list_3" hidden
+									<li>
+											3
+									
+									</li>
+									<li>
+											3
+									</li>
+									
+								</ul>
+								</li>
+								<li>
+										2
+										<ul class="inline_list_3" hidden>
+									<li>
+											3
+									
+									</li>
+									<li>
+											3
+									</li>
+									
+								</ul>
+								</li>
+							</ul>
+						</li>
+						</li>
+					</ul>
+				</li>
+				<li>
+					Портфолио
+					<ul class="inline_list_1" hidden>
+						<li>1
+							<ul class="inline_list_2" hidden>
+								<li>
+								2
+								</li>
+								<li>
+										2
+								</li>
+								<li>
+										2
+								</li>
+							</ul>
+						</li>
+						<li>
+								1
+						</li>
+						<li>
+								1
+						</li>
+						<li>
+								1
+						</li>
+					</ul>
+				<li>
+					Контакты
+					<ul class="inline_list_1" hidden>
+						<li>
+								1
+						</li>
+						<li>
+								1
+						</li>
+						<li>
+								1
+						</li>
+					</ul>
+				</li>
+				<li>
+					Новости
+					<ul class="inline_list_1" hidden>
+						<li>1
+								
+						</li>
+					</ul>
+				</li>
+				<li>
+					Блог
+				</li>
+			</ul>
+		</nav>
+<!--jQuery CDN – Latest Stable Versions Powered by jQuery Core Showing the latest stable release in each major branch. See all versions of jQuery Core. jQuery 3.x jQuery Core 3.3.1 - uncompressed, minified, slim, slim minified jQuery 2.x jQuery Core 2.2.4 - uncompressed, minified jQuery 1.x jQuery Core 1.12.4 - uncompressed, minified jQuery Migrate jQuery Migrate 3.0.1 - uncompressed, minified jQuery UI Showing the latest stable release for the current and legacy release families. See all versions of jQuery UI. jQuery UI 1.12 jQuery UI 1.12.1 - uncompressed, minified Themes: base black-tie blitzer cupertino dark-hive dot-luv eggplant excite-bike flick hot-sneaks humanity le-frog mint-choc overcast pepper-grinder redmond smoothness south-street start sunny swanky-purse trontastic ui-darkness ui-lightness vader jQuery UI 1.11 jQuery UI 1.11.4 - uncompressed, minified Themes: black-tie blitzer cupertino dark-hive dot-luv eggplant excite-bike flick hot-sneaks humanity le-frog mint-choc overcast pepper-grinder redmond smoothness south-street start sunny swanky-purse trontastic ui-darkness ui-lightness vader jQuery Mobile Showing the latest stable release for jQuery Mobile. See all versions of jQuery Mobile. jQuery Mobile 1.4.5 - uncompressed, minified, theme (structure only) jQuery Color Showing the latest stable release for jQuery Color. See all versions of jQuery Color. jQuery Color 2.1.2 - uncompressed, minified jQuery Color SVG Color Names 2.1.2 - uncompressed, minified jQuery Color With Names (last two together) 2.1.2 - uncompressed, minified QUnit Showing the latest stable release for QUnit. See all versions of QUnit. QUnit 2.6.0 - uncompressed, theme PEP Showing the latest stable release for PEP. See all versions of PEP. PEP 0.4.3 - uncompressed, minified-->
+		<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+  <script src='js.js'></script>
+	</body>
 </html>
