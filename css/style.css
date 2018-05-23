@@ -1,0 +1,45 @@
+.menu {
+  display: block; 
+  width: 960px; 
+  list-style-type: none;
+}
+.menu >li {
+  position: relative; 
+  float: left; 
+  border-bottom: 2px solid rgb(238, 44, 118)333; 
+  text-align: left;
+}
+.menu >li:hover {
+  float: left; 
+  border-bottom: 2px solid rgb(241, 132, 241);
+}
+.menu >li >a { 
+  text-transform: uppercase;
+}
+.menu li a {
+  display: block; 
+  padding: 8px 16px; 
+  background: rgb(92, 15, 79); 
+  color: #eee; 
+  text-decoration: none;
+}
+.menu li a:hover {
+  color: rgb(241, 132, 241);
+}
+.sub-menu {
+  display: none; 
+  position: absolute; 
+  width: 210px;
+}
+.sub-menu li {
+  display: block; 
+  position: relative;
+}
+.sub-menu li + li {
+  border-top: 1px solid rgb(85, 85, 85);
+}
+.sub-menu .sub-menu {
+  left: 170px; 
+  top: 0; 
+}
+
