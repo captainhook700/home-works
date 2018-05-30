@@ -1,0 +1,41 @@
+(function(){
+	//простой js
+	var input = document.getElementById('main');
+	input.oninput = function() {
+		var result_val = input.value;
+		//jquery
+		var n = 0;
+		var lower = result_val.toLowerCase();	  
+		String.prototype.capitalize = function() {
+			return this.replace(/(^|\s)\S/g, function(a) { return a.toUpperCase(); });
+		};
+		var string = lower.capitalize();
+		document.getElementById('one').innerHTML = string
+		var li = $('.one').find('li');
+			li.each(function(){
+				var the = $(this);
+				n++;
+				var data = the.attr('data-cities')
+				var data_split = data.split(',')
+				data_split.forEach(function(elem,index){
+						var a = elem.substr(0,string.length);
+						var a_split = a.split(',');
+						var index_1 = index;
+						a_split.forEach(function(elem){
+							var b =  string;
+							if(b == elem && result_val != ''){
+								var slice = data_split.splice(index + 1);
+								$(the).removeAttr("hidden")
+							}
+							else{
+								$(the).attr("hidden",'true')
+								false
+							}
+						});	
+				
+				});
+							
+			});	
+	}
+
+})();

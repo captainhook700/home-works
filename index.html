@@ -1,10 +1,158 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-    <head>
-        <title>Test</title>
-        <meta charset="utf-8">
-    </head>
-    <body>
-        <script src="scripts/main.js"></script>
-    </body>
+	<head>
+		<title></title>
+		<meta charset="utf-8">
+	</head>
+	<style type="text/css">
+	#city{
+	}
+	input{ 
+		border: none;
+		border-bottom: 2px solid gray;
+		padding: 5px;
+	}	
+	input:focus{
+		border: none;
+		border-bottom: 2px solid green;
+		outline: none;
+	}
+	ul{
+		margin-left: 174px
+	}
+#city li{
+	list-style: none;
+	border-radius: 20px;
+	border-left: 3px solid red;
+	padding: 5px;
+	width: 160px;
+	background: orange;
+}
+#marka li{
+	list-style: none;
+	border-radius: 20px;
+	border-left: 3px solid blue;
+	padding: 5px;
+	width: 160px;
+	background: lightblue;
+}
+
+		
+	</style>
+	<body>
+		<div id="city" > 
+			<label for="main" >Доступные машины в городах</label>
+			<input type="text" id="main" >
+			<div id="one"></div>
+			<ul class="one">
+				 <li data-cities="New York,Chicago,Green Bay" hidden>
+				 	Mazda
+				 </li>
+		 		 <li data-cities="New York,Minneapolis" hidden>
+		 		 	Toyota
+		 		 </li>
+		 		 <li data-cities="Dallas,Los Angeles" hidden>
+		 		 	Renault
+		 		 </li>
+		 		 <li data-cities="Washington,Chicago,Boston" hidden>
+		 		 	Honda
+		 		 </li>
+		 		 <li data-cities="Houston,San Diego,New York" hidden>
+		 		 	Subaru
+		 		 </li>	
+		 		 <li data-cities="York,London,Liverpool" hidden>
+				 	Alfa Romeo
+				 </li>
+		 		 <li data-cities="New York,Aphins" hidden>
+		 		 	
+					Bristol
+		 		 </li>
+		 		 <li data-cities="Paris,Kiyev" hidden>
+		 		 	
+Buick
+		 		 </li>
+		 		 <li data-cities="ZaporozHye,Minessota,Boston" hidden>
+		 		 	
+Isuzu
+		 		 </li>
+		 		 <li data-cities="Nebraska,San Diego,New York" hidden>
+		 		 	Cizeta
+		 		 </li>	
+			</ul>
+		</div>
+		<div id="marka" > 
+			<label for="mark">Марки car доступны в городах</label>
+			<input type="text" id="mark" >
+			<div id="two" ></div>
+			<ul class="two">
+				 <li data-cities="Mazda" hidden>
+					 New York
+				</li>
+				<li data-cities="Mazda" hidden>	 
+					 Chicago
+				</li>	 
+				<li data-cities="Mazda" hidden>
+					 Green Bay
+				</li>
+				<li data-cities="Izuzu" hidden>	 
+					 Kiyev
+				</li>	 
+				<li data-cities="Hunday" hidden>
+					 Zaporozhye
+				</li>
+		 		<li data-cities="Toyota" hidden>
+					 New York
+				</li>	
+				<li data-cities="Toyota" hidden> 
+					 Minneapolis
+
+				</li>
+				<li data-cities="Toyota" hidden> 
+					 Zaporozhye
+
+				</li>
+				<li data-cities="Renault" hidden>
+					 Dallas
+				</li>	 
+				<li data-cities="Renault" hidden>
+					 Los Angeles
+				</li>
+				<li data-cities="Honda" hidden>
+					 Washington
+				<li data-cities="Honda" hidden>	 
+					 Boston
+				<li data-cities="Honda" hidden>	 
+					 Chicago
+				</li>
+				<li data-cities="Honda" hidden>	 
+					 Kharkiv
+				<li data-cities="Honda" hidden>	 
+					 Lviv
+				</li>
+				<li data-cities="Subaru" hidden>
+					 Houston
+				</li>	 
+				<li data-cities="Subaru" hidden>	 
+					 San Diego
+				</li>
+				<li data-cities="Subaru" hidden>	 
+					 New York
+				</li>
+				<li data-cities="Isdera" hidden>	 
+					 Lviv
+				</li>
+				<li data-cities="Isdera" hidden>
+					 Houston
+				</li>
+			</ul>
+		</div>
+		<div style="clear: both;"></div>
+		<script
+  src="http://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+  <script type="text/javascript" src="js.js">
+  	
+  </script>
+	</body>
 </html>
