@@ -1,0 +1,50 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: monospace;
+}
+
+main {
+  width: 300px;
+  margin: auto;
+}
+
+input {
+  width: inherit;
+  line-height: 40px;
+  padding-left: 5px;
+  font-size: 16px;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #ccc;
+}
+
+.auto {
+  width: inherit;
+  margin-top: 20px;
+}
+
+.auto__brand {
+  list-style: none;
+  margin-bottom: 10px;
+  color: #282828;
+  font-size: 18px;
+}
+
+.city {
+  width: inherit;
+  margin-top: 20px;
+}
+
+.city__brand {
+  list-style: none;
+  margin-bottom: 10px;
+  color: #282828;
+  font-size: 18px;
+}
+
+.auto__wrapper,
+.city__wrapper {
+  width: inherit;
+  margin: 20px auto 50px;
+}
