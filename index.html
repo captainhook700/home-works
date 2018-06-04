@@ -1,10 +1,88 @@
-<!doctype html>
-<html>
-    <head>
-        <title>Test</title>
-        <meta charset="utf-8">
-    </head>
-    <body>
-        <script src="scripts/main.js"></script>
-    </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>    
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+    <div class="tabs">
+
+        <ul class="tabs__caption">
+          <li class="tab active q">Первая вкладка</li>
+          <li class="tab q">Вторая вкладка</li>
+          <li class="tab third">Третья вкладка</li>
+          <li id="contenInput" class="tab s q"></li>
+        </ul>
+        <div class="tabs_pod">
+                <a href="#" class="f">Один</a> <hr>
+                <a href="#" class="ff">Два</a>
+        </div>
+        <div class="tabs__content  active">
+          <p>"First Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
+              et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut 
+              aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse 
+              cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in 
+              culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+      
+        <div class="tabs__content">
+          <p>"Second Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
+              et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut 
+              aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse 
+              cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in 
+              culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+      
+        <div class="tabs__content">
+                <p>"Third Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
+                        et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut 
+                        aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse 
+                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in 
+                        culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+        <div class="tabs__content h"><p id="contenInput2"></p></div>
+
+        <!-- <div class="tabs__content3">
+                <p>"Third First Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
+                        et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut 
+                        aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse 
+                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in 
+                        culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+        <div class="tabs__content4">
+                <p>"Third Second Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
+                        et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut 
+                        aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse 
+                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in 
+                        culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div> -->
+
+      </div>
+
+      <div id="wrapper">
+            <div class="cover"></div>
+            <div class="modal">
+              <div class="content">
+                    <span id="modal_close">X</span>
+                <p>Название новой вкладки</p>
+                <form onsubmit="return false">
+                  <input type="text" placeholder="test" class="w">
+                  <input type="text" placeholder="text" class="t">
+                  <button class="open-modal-btn2">Добавить</button>
+                </form>
+              </div>
+              
+            </div>
+          
+            <div class="cnt">
+              <button class="open-modal-btn">Добавить</button>
+            </div>
+          </div>
+
+    <script src="js/script.js"></script>
+</body>
 </html>
