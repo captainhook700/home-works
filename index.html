@@ -1,10 +1,92 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-    <head>
-        <title>Test</title>
-        <meta charset="utf-8">
-    </head>
-    <body>
-        <script src="scripts/main.js"></script>
-    </body>
+	<head>
+		<title></title>
+		<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.0/themes/smoothness/jquery-ui.css"> 
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script> 
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<style>
+
+ .ui-dialog-content .inputs,
+ .ui-dialog-content .inputs:focus {
+   border: none;
+   outline: none;	border-bottom: 2px solid gray;
+		padding: 5px;
+}
+.ui-dialog-content label{
+   		font-weight: bold;
+   		color:#093f52;
+   }
+ .ui-widget input, .ui-widget select, .ui-widget textarea, .ui-widget button {
+    font-family: none;
+    font-size: 17px; 
+
+}
+   .ui-widget-header{
+   		background: #2fc3f5;
+   		color:#3d849c;
+   }
+    .ui-widget-content .ui-state-active, a.ui-button:active, .ui-button:active, .ui-button.ui-state-active:hover{
+   	background: red;
+   	color: white;
+   }
+</style>
+	</head>
+	<body>
+		<main style="width:950px">
+			<ul class="main">
+				<li><a href="#Create Album">Profile</a></li>
+				<li><a href="#Album">Album</a></li>
+				<li><a href="#Create_Album">Create Album</a></li>
+			</ul>
+
+			<div id="Profil">
+				
+			</div>
+
+			<div id="Album">
+				<ul style="margin-left: -40px;">
+					
+				</ul>
+			</div>
+
+			<div id="Create_Album">
+				<form id="form" style="border:none inherit">
+					<label for="text_create">Введите название</label>
+					<input class="inputs_1" type="text" id="text_create" placeholder="My photo"><br><br>
+					<label for="data">Введите datu</label>
+					<input class="inputs_1" type="text" id="data"><br><br>
+					<label for="color">Введите цвет фона</label>
+					<input type="color" id="color"><br><br>
+					<label for="color_text">Введите цвет текста</label>
+					<input type="color" id="color_text"><br><br>
+					<label for="texterea_create">Описание</label><br>
+					<textarea class="inputs_1" id="texterea_create" cols="18" rows="4" style="resize: none;" maxlength="60">
+					</textarea><br>
+					<input type="button" id="button_create_end" value="add">
+					<input type="reset"  value="reset">
+				</form>
+			</div>
+		</main>
+
+		
+			<form method="post" action="#" id="main_main_moduls"  title="Регестрация" style="overflow-x: hidden;">
+				<label for="login">логин</label><br>
+				<input class="inputs" type="text" id="login" name="text" placeholder="введите логин"><br><br>
+				<label for="mail">почта</label><br>
+<input  class="inputs" type="email" id="mail" name="email" placeholder="введите  почта"><br><br>
+				<label for="data_born">Дата рождения</label>
+				<input class="inputs" type="text" id="data_born"><br>
+				<label for="photo">Ваше фото</label><br>
+					<input type="file" id="photo"><br>
+				
+				<label for="pass">пароль</label><br>
+				<input  class="inputs" type="password" id='pass' name="password" placeholder="введите пароль"><br><br>
+				<label for="pass_2">повторите пароль</label><br>
+				<input  class="inputs" type="password" id='pass_2' name="password" placeholder="повторите пароль"><br><br>
+				<input type="button" class="submit" name="submit" value="отправить" >
+			</form>
+		<script type="text/javascript" src="main.js"></script>
+	</body>
 </html>

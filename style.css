@@ -1,0 +1,11 @@
+main{
+	margin-left: auto;
+	margin-right: auto;
+}
+.main li:first-child{
+	margin-left: 300px;
+}
+.main input{
+	border: none;
+	
+}
