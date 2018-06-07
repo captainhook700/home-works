@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+</head>
+<body>
+<div id="demo"></div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function loadDoc() {
+        $.ajax({
+            url: 'http://restapi.fintegro.com/data.json', // Путь к файлу, к которому мы пытаемся обратиться
+            dataType: 'json', // Формат данных, который мы планируем получить
+            success: parseCSVData, // Callback функция выполняемая в случае успешного ответа
+
+            beforeSend: function() { // Callback функция, выполняемая перед отправкой данных (если нужна)
+                // debugger;
+                $('#demo').html('Loading...'); // Добавим в контейнер надпись "Loading..." пока данные загружаются
+                // debugger;
+            },
+
+            error: function() {  // Callback функция, выполняемая в случае ошибки при получении ответа
+                $('#demo').html('<span style="color: red">There is some error!</span>');
+            }
+        });
+
+    });
+    
+
+    function parseCSVData(data) { // Функция для парсинга данных CSV (так как выполняем её на success нашего
+        $('#demo').html(''); // Очищаем содержимое контейнера (от Loading, ошибок (если есть) и т.д.)
+        
+        var doc = document;
+        var table = doc.createElement('table'), tr, td, thead, th, input, tbody; // Создадим переменные для наших HTML элементов (table, tr, td)
+        $(table).addClass('table table-bordered');
+        $(table).css('table-layout', 'fixed');
+        firstStr = data[0];
+        thead = doc.createElement('thead'); // создаём <thead></thead>
+        for (a in firstStr) {
+            th = doc.createElement('th');
+            th.append(a);
+            th.append(doc.createElement('br'));
+            input = doc.createElement('input');
+            $(input).data('search', a)
+            $(input).keyup(function() {
+                _this = this;
+                $.each($("table tbody tr td[search='"+ $(_this).data('search') +"']"), function() {
+                    console.log($(this).text())
+                    if($(this).text().toLowerCase().indexOf($(_this).val().toLowerCase()) === -1) {
+                        $(this).parent().hide();
+                    } else {
+                        $(this).parent().show();                
+                    }
+                });
+            });
+
+            th.append(input);
+            thead.append(th);
+        }
+        table.append(thead);
+        tbody = doc.createElement('tbody'); // создаём <thead></thead>
+        table.append(tbody);
+        for (record of data) {
+            
+
+
+            tr = doc.createElement('tr'); // создаём <tr></tr>
+            for (col in record){
+                td = doc.createElement('td'); // создаём <td></td>
+                $(td).data('search', col)
+                $(td).attr('search', col)
+                $(td).append($.trim(record[col])); // вставляем содержимое текущей ячейки массива в td
+                tr.append(td); // добавляем текущий td в текущий tr
+            }
+
+            tbody.append(tr); // после окончания строки массива, добавляем текущий tr в table
+        }
+        $('#demo').append(table); // По завершении работы циклов, вставляем готовую таблицу в контейнер
+    }
+</script>
+</body>
+</html>
