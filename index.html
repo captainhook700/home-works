@@ -1,10 +1,39 @@
 <!doctype html>
 <html>
     <head>
-        <title>Test</title>
+        <title>12-JuliFed</title>
         <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="assets/style.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous"> 
+		
     </head>
     <body>
-        <script src="scripts/main.js"></script>
+        <div class="container">
+            <div class="row">
+                <div class="col-6">
+                    <div class="form-group">
+                        <label for="find_by_cities">Поиск авто по городу</label>
+                        <input type="text" class="form-control" id="find_by_cities" aria-describedby="find_by_cities" placeholder="Enter city">
+                    </div>
+                    <ul id="autoList">
+                    </ul>
+                </div>
+
+                <div class="col-6" style="border-left: 6px solid green;">
+                    <div class="form-group">
+                        <label for="find_by_auto">Поиск города в котором есть необходимое авто</label>
+                        <input type="text" class="form-control" id="find_by_auto" placeholder="Enter auto">
+                    </div>
+                    <ul id="citiesList">
+                    </ul>
+                    
+                </div>
+            </div>
+        </div>
+
+
+
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script type="text/javascript" src="assets/script.js"></script>
     </body>
 </html>
