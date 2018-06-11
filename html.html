@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.0/themes/smoothness/jquery-ui.css"> 
+		<script src="https://code.jquery.com/jquery-1.12.4.js"></script> 
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+		<link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+	<body>
+		<div>
+			<input type="button" id='button' value='Зерагестрироваться' >
+			<style type="text/css">
+				input{
+					border: none;
+					border-bottom: 2px solid gray;
+					box-shadow: none;
+				}
+				input:focus{
+					outline: none;
+					border-bottom: 2px solid blue;
+				}
+			</style>
+			<form method="post" action="#" id="main_main_moduls" hidden title="Регестрация нового пользователя">
+				<label for="login">логин</label><br>
+				<input class="inputs" type="text" id="login" name="text" placeholder="введите логин"><br><br>
+				<label for="mail">почта</label><br>
+				<input  class="inputs" type="email" id="mail" name="email" placeholder="введите  почта"><br><br>
+				<label for="pass">пароль</label><br>
+				<input  class="inputs" type="password" id='pass' name="password" placeholder="введите пароль"><br><br>
+				<label for="pass_2">повторите пароль</label><br>
+				<input  class="inputs" type="password" id='pass_2' name="password" placeholder="повторите пароль"><br><br>
+				<input type="button" class="submit" name="submit" value="отправить" >
+			</form>
+		</div>
+		<div>
+			<input type="button" id='button_vhod' value='Войти' >
+			<style type="text/css">
+				input{
+					border: none;
+					border-bottom: 2px solid gray;
+					box-shadow: none;
+				}
+				input:focus{
+					outline: none;
+					border-bottom: 2px solid blue;
+				}
+			</style>
+			<form method="post" action="#" id="main_main_moduls_vhod" hidden title="Регестрация нового пользователя">
+				<label for="login_vhod">логин</label><br>
+				<input class="inputs" type="text" id="login_vhod" name="text" placeholder="введите логин"><br><br>
+				<label for="pass_vhod">пароль</label><br>
+				<input  class="inputs" type="password" id='pass_vhod' name="password" placeholder="введите пароль"><br><br>
+				<input type="button" class="submit_vhod" name="submit" value="Войти" >
+			</form>
+		</div>
+		<script src='main.js'></script>
+	</body>
+</html>
