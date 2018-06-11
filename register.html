@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Register</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="assets/style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="assets/validation.js"></script>
+
+</head>
+<body>
+
+<div class="container">
+  <h2>Register form</h2>
+  <div id="err_cont" class="">
+    <ul id="errors_text">
+    </ul>
+  </div>
+
+  <form class="form-horizontal" method="POST" id="form-reg" action="javascript:void(null);">
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="login">Login:</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="login" placeholder="Enter login" name="login" required>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="email">Email:</label>
+      <div class="col-sm-10">
+        <input type="email" class="form-control" id="email" placeholder="Enter email" name="email" required>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="pwd">Password:</label>
+      <div class="col-sm-10">          
+        <input type="password" class="form-control" id="password" placeholder="Enter password" name="password" required>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="cnf-pwd">Confirm password:</label>
+      <div class="col-sm-10">          
+        <input type="password" class="form-control" id="cnf-pwd" placeholder="Enter password confirm" name="cnfpwd" required>
+      </div>
+    </div>
+
+        <div class="form-group">
+      <label class="control-label col-sm-2" for="firstname">First name:</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="firstname" placeholder="Enter first name" name="firstname" >
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="lastname">Last name:</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="lastname" placeholder="Enter last name" name="lastname" >
+      </div>
+    </div>
+
+    <div class="form-group">        
+      <div class="col-sm-offset-2 col-sm-10">
+        <button type="submit" class="btn btn-default">Submit</button>
+      </div>
+    </div>
+  </form>
+  </div>
+  
+  <script>
+
+    $(document).ready(function (){
+        $('#form-reg').on('submit',registerUser);
+    });
+
+    function registerUser() {
+        var user   = $('#form-reg').serialize();
+        $.ajax({
+            type: 'POST',
+            url: 'http://restapi.fintegro.com/registration', // Путь к файлу, к которому мы пытаемся обратиться
+            data: user,
+            //dataType:'json',
+            beforeSend: function() {
+                $('#err_cont').empty();
+                formValid = Object.create(Validator);
+                formValid.constructor('#form-reg', {
+                    fields: {
+                        '#login': {
+                          required: true,
+                          maxlength: 20
+                        },
+                        '#password': {
+                            required: true,
+                            minlength: 6,
+                            maxlength: 10
+                        },
+                        '#email': {
+                          required: true,
+                        },
+                        '#firstname':{
+                          maxlength: 30
+                        },
+                        '#lastname':{
+                          maxlength: 30
+                        }
+                    }
+                });
+                if (!formValid.validate()){
+                    var errP =  document.createElement('li').append( 'Errors in inputs' );
+                    $('#errors_text').append(errP);  
+                    return false;
+                }
+            },
+            success: function(data) { // Callback функция выполняемая в случае успешного ответа
+                $('#err_cont').empty();
+                $('#err_cont').append('User was created successfully');  
+                $('#err_cont').addClass('success');
+
+            },
+            error: function(data) {  // Callback функция, выполняемая в случае ошибки при получении ответа
+                var li;
+                $('#err_cont').empty();
+                var ul = $('<ul />')
+                var errors = JSON.parse(data.responseText).errors;
+                for (err in errors){
+                    for (msg in errors[err]) {
+                        console.log(errors[err][msg])
+                        li = $('<li />', {text: errors[err][msg] });
+                        ul.append(li);  
+                    }
+                $('#err_cont').append(ul);
+                $('#err_cont').addClass('error');
+              }
+            }
+        });  
+    }
+
+</script>
+</body>
+</html>

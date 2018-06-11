@@ -1,0 +1,27 @@
+.error{
+    padding: 0 30px 20px 50px;
+    color: #999;
+    max-height: 0;
+    transition: 0.28s;
+    overflow: hidden;
+    color: red;
+    font-style: italic;
+    max-height: 200px; 
+
+}
+.success{
+    padding: 0 30px 20px 50px;
+    color: #999;
+    max-height: 0;
+    transition: 0.28s;
+    overflow: hidden;
+    color: green;
+    font-style: italic;
+    max-height: 200px; 
+}
+.inputValid {
+    border: 1px solid #ced4da;
+}
+.inputInvalid {
+	border: 1px solid #ff0000 !important;
+}
