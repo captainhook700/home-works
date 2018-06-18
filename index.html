@@ -1,10 +1,35 @@
-<!doctype html>
-<html>
-    <head>
-        <title>Test</title>
-        <meta charset="utf-8">
-    </head>
-    <body>
-        <script src="scripts/main.js"></script>
-    </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>    
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"/>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+</head>
+<body>
+  <div id="tabs">
+    <ul class="tabs__caption">
+      <li><a href="#tabs-1">Profile</a></li>
+      <li><a href="#tabs-2">Albums</a></li>
+      <li><a href="#tabs-3">Create Album</a></li>
+    </ul>
+  <div id="tabs-1" class="tabs__content active">
+    <p>Содержимое вкладки 1</p>
+  </div>
+  <div id="tabs-2" class="tabs__content">
+    <h3>Album1</h3>
+    <p>About</p>
+  </div>
+  <div id="tabs-3" class="tabs__content">
+      <input type="text" placeholder="Album Title" class="modalw">
+      <input type="text" placeholder="Album Description" class="modalw">
+      <button class="modalb">Add New Album</button>
+  </div>
+  </div>
+    <script src="js/script.js"></script>
+</body>
 </html>
