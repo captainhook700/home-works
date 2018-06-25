@@ -1,0 +1,159 @@
+	<div class="wrapper" >
+	    
+	    <form name="registration-form" class="registration-form" method="post">
+
+	        <div class="header">
+	            <h1>Регистрация</h1>
+	            <span>Введите данные для регистрации</span>
+	        </div>
+
+	        <div class="content">
+	            <label>Введите ваш ник</label>
+	            <input name="login" type="text" id='user' class="input login" placeholder="Логин"/><label>Введите email</label>
+	            <input name="email type="email" id='mail' class="input email" placeholder="email"/> <label>Введите пароль</label>
+	            <input name="password" type="password" id='pass' class="input password" placeholder="password"/>
+	            <label>Введите имя</label>
+	            <input name="firstname" type="text" id='first' class="input firstname" placeholder="Имя"/>
+	            <label>Введите фамилию</label>
+	            <input name="lastname" type="text" id='last' class="input lastname" placeholder="Фамилия"/> 
+	             
+	            
+	           
+	            
+	        </div>
+
+	        <div class="footer">
+	           <input type="button" name="submit" value="Завершить" id="registration_ok" class="button" />
+	        </div>
+
+	    </form>
+    
+    </div>
+
+<!--   	<div class="wrapper" hidden>
+    
+    <form name="registration-form" class="registration-form" method="post">
+
+        <div class="header">
+            <h1>Регистрация</h1>
+            <span>Введите данные для регистрации</span>
+        </div>
+
+        <div class="content">
+          <label>Введите дату рождения</label>
+            <input name="date" type="date" class="input date" placeholder="дата"/>
+            <br>
+            <br> 
+           
+			<label for="radio1"><input type="radio" name="radio" id="radio1"> Мужчина</label>
+			<label for="radio2" ><input type="radio" name="radio" id="radio2">Женщина</label>
+
+			 <label>Введите email</label>
+	            <input name="email type="email" id='mail' class="input email" placeholder="email"/>
+	            <label>Введите пароль</label>
+	            <input name="password" type="password" id='pass' class="input password" placeholder="password"/>
+		
+        </div>
+
+        <div class="footer">
+		 <input type="button" name="submit_right" value="Продолжить" class="button right" />
+            
+			<input type="button" name="submit" value="Назад" class="button_back" style="background:#ff1749; border: 1px solid rgba(256,256,256,0.75);"/>
+        </div>
+
+    </form>
+    
+    </div>-->
+	
+  <!--  <div class="wrapper" hidden style="padding-right:5px">
+	    
+	    <form name="registration-form" class="registration-form" method="post">
+
+	        <div class="header">
+	            <h1>Регистрация</h1>
+	            <span>Введите данные для регистрации</span>
+	        </div>
+
+	        <div class="content">
+	            <label>фото профиля</label><br><br>
+				<input type="file" name="files" onChange="myFunc(this)" multiple /><br><br>
+				<div id="images" ></div>
+	        </div>
+
+	        <div class="footer">
+			<input type="submit" name="submit" value="Закончить" id="registration_ok" class="button" />
+				<input type="button" name="submit" value="Назад" class="button_back" style="background:#ff1749; border: 1px solid rgba(256,256,256,0.75);"/>
+	            
+	        </div>
+
+	    </form>
+    <script>
+    	function myFunc(input) {
+        
+        var files = input.files || input.currentTarget.files;
+    
+        var reader = [];
+        var images = document.getElementById('images');
+        var name;
+        for (var i in files) {
+            if (files.hasOwnProperty(i)) {
+                name = 'file' + i;
+                
+                reader[i] = new FileReader();
+                reader[i].readAsDataURL(input.files[i]);
+                
+                images.innerHTML += '<img id="'+ name +'" src="" width="255px" style="border:2px solid red; border-radius: 10px;"/>';
+					
+                (function (name) {
+                    reader[i].onload = function (e) {
+                        console.log(document.getElementById(name));
+                        document.getElementById(name).src = e.target.result;
+                    };
+                })(name);
+                
+                
+                console.log(files[i]);
+            }
+        }
+    }
+    </script>
+    </div>-->
+    <script>
+    	(function(){
+	
+		$($('.wrapper')[0]).find('.right').click(function(){
+			$($('.wrapper')[0]).attr('hidden',true);
+			$($('.wrapper')[1]).removeAttr('hidden')
+		});
+		$($('.wrapper')[1]).find('.right').click(function(){
+			$($('.wrapper')[1]).attr('hidden',true);
+			$($('.wrapper')[2]).removeAttr('hidden')
+		});
+		
+		$($('.wrapper')[2]).find('.button_back').click(function(){
+			$($('.wrapper')[2]).attr('hidden',true);
+			$($('.wrapper')[1]).removeAttr('hidden')
+		});
+		$($('.wrapper')[1]).find('.button_back').click(function(){
+			$($('.wrapper')[1]).attr('hidden',true);
+			$($('.wrapper')[0]).removeAttr('hidden')
+		});
+})()
+$('body').on('keyup','#user',function(){
+    console.log($('#user').val())
+});
+$('body').on('keyup','#first',function(){
+    console.log($('#first').val())
+});
+$('body').on('keyup','#last',function(){
+    console.log($('#last').val())
+});
+$('body').on('keyup','#mail',function(){
+    console.log($('#mail').val())
+});
+$('body').on('keyup','#pass',function(){
+    console.log($('#pass').val())
+});
+    </script>
+
+	

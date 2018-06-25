@@ -1,0 +1,32 @@
+<div class="wrapper">
+    <div class="user-icon"></div>
+    <div class="pass-icon"></div>
+    
+<form name="login-form" class="login-form" method="post">
+
+    <div class="header">
+        <h1>Авторизация</h1>
+        <span>Введите данные для входа </span>
+    </div>
+
+    <div class="content">
+        <input name="username" type="text" id='login_form' class="input username" placeholder="Логин"/>
+        <input name="password" type="password" id='password_form' class="input password" placeholder="Пароль"/>
+    </div>
+
+    <div class="footer">
+        <input type="button" name="submit" value="ВОЙТИ" id="sign" class="button" />
+        <input type="button" name="start_ragistration_button" value="Регистрация" id="start_ragistration" class="register" />
+    </div>
+
+</form>
+</div>
+<div class="gradient"></div>
+<script>
+    $('body').on('keyup','#login_form',function(){
+    console.log($('#login_form').val())
+});
+$('body').on('keyup','#password_form',function(){
+    console.log($('#password_form').val())
+});
+</script>

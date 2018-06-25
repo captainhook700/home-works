@@ -1,0 +1,96 @@
+<div class="dark" hidden style="position: absolute; height: 100%;
+				width: 100%; background: rgba(0,0,0,0.3); z-index: 1002;"></div>
+			<div class="head">
+				<div class="header">
+					<div class="left_head"><img src="images/head2.png" width="60px" style="position: absolute; "></div>
+					<div class="right_head">
+						<div class="first_name_profile"></div>
+						<ul class="profile_menu" hidden>
+							<li class="first_name_profile"></li>
+							<hr>
+							<li class="my_profil">Моя страница</li>
+							<li class="settings">Настройки</li>
+							<hr>
+							<li class="logout"> Выход</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="clear"></div>
+			<div class="wrapper_profile">
+			    <div class="navs">
+					<div class="least">Моя страница</div>
+					<div class="photoes">Фотографии</div>
+					<hr style="width:80%"><br>
+					<div class="logout"> Выход</div>
+				</div>
+
+				<div class="profile">
+					<div class="albums div_photo">
+						<div class="my_album ">
+							<div style="display: inline-block; color: lightgray"><a href="#" class="click_a">Мои Фотографии</a> ><span style="color: black" class="name_album"> </span> <span style="color: black;display: inline-block;margin-right:510px;" class="count_photo"> </span><input type="button"  name="add_photo" class="add_photo button_add" style="position:absolute;background: #3870b0; color: white;top:15px; right:60px;" value="Добавить фото"></div>
+						</div>
+						<div class="clear"></div>
+						<hr>
+						<div class="set_photo">
+							
+						</div>
+					</div>
+				</div>
+				<div class="clear"></div>
+
+			</div>
+
+			<div class="modals_photo_open" style="width:600px; z-index: 1004; position: absolute; background:rgba(0,0,0,0.3); padding: 10px; left:35%; right:40%" hidden>
+				<input type="button" class="close_photo" value="close">
+				<div class="photo_open"></div>
+			</div>
+			<div class="modals_photo" title="Добавить фото" hidden>
+				<div class="head_moduls">Добавить фото</div>
+				<div class="content_moduls">						
+					<h5>Добавить</h5>
+					<form id="uploadPhoto">
+							<input type="file"  name="UploadForm[imageFile]"  id="addPhotoField"  style="border: 1px solid lightgray;"><br>
+					</form>		
+					<div id="images" style="width:200px;"></div>
+				</div>	
+				<div class='footer_modal'>
+					<input type="reset" name="reset_modal" class="reset_modal_photo button_add" value="Отмена">
+					<input type="button" name="button_modal_submit_photo" class="button_modal_submit_photo button_add" style="background: #3870b0; color: white; margin-left: 10px" value="Добавить в альбом">
+				</div>
+			</div>
+
+
+
+<!--
+onChange="myFunc(this)"
+<script>
+    	function myFunc(input) {
+        
+        var files = input.files || input.currentTarget.files;
+    
+        var reader = [];
+        var images = document.getElementById('images');
+        var name;
+        for (var i in files) {
+            if (files.hasOwnProperty(i)) {
+                name = 'file' + i;
+                
+                reader[i] = new FileReader();
+                reader[i].readAsDataURL(input.files[i]);
+                
+                images.html('<img id="'+ name +'" src="" width="255px" style="border:2px solid red; border-radius: 10px;"/>');
+					
+                (function (name) {
+                    reader[i].onload = function (e) {
+                        console.log(document.getElementById(name));
+                        document.getElementById(name).src = e.target.result;
+                    };
+                })(name);
+                
+                
+                console.log(files[i]);
+            }
+        }
+    }
+    </script>-->

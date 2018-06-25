@@ -1,0 +1,609 @@
+/*******************
+LOGIN FORM STYLESHEET
+by: Amit Jakhu
+www.amitjakhu.com
+*******************/
+
+/*******************
+FONTS
+*******************/
+
+@import url(http://fonts.googleapis.com/css?family=Bree+Serif);
+
+/*******************
+SELECTION STYLING
+*******************/
+
+::selection {
+	color: #fff;
+	background: #f676b2; /* Safari */
+}
+::-moz-selection {
+	color: #fff;
+	background: #f676b2; /* Firefox */
+}
+
+/*******************
+BODY STYLING
+*******************/
+
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+hr{
+	background: #014687;
+	height: 1px
+}
+body {
+	/*background: url(../images/bg.png) repeat;*/
+	background: #edeef0;
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-weight:300;
+	text-align: left;
+	text-decoration: none;
+}
+.clear{
+	clear: both;
+}
+.head{
+	width: 100%;
+	height: 40px;
+	background: #0aa1ff;
+	margin-bottom: 20px;
+	position: fixed;
+	z-index: 1000;
+	margin-top: -60px;
+}
+
+/*header*/
+.header{
+	width: 1040px;
+	
+	height: 40px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.right_head{
+	float: right;
+	margin-top: 10px;
+	margin-right: 90px;
+
+
+}
+.right_head >div{
+	padding: 10px;
+	background: #0f6ca6;
+	
+	margin-top:-10px;
+	margin-bottom:-10px;
+	color:white;
+}
+.right_head >div:hover{
+	
+	background: #137dbf;
+
+}
+.right_head > ul{
+	position: absolute;
+	z-index: 1003;
+	margin-top: 10px;
+	margin-right: 10px;
+	background: white;
+	border: 1px solid #0f8bd9;
+	border-radius: 10px;
+	box-shadow: 1px 1px 2px lightblue
+}
+.right_head > ul hr{
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+}
+.right_head > ul li{
+	list-style: none;
+	padding: 0px 15px;
+	width: 140px;
+	border-left: 4px solid white;
+}
+.right_head > ul li:last-child{
+	margin-bottom: 10px; 
+	
+}
+.right_head > ul li:hover{
+	background: #bbc4c9;
+	border-left: 4px solid red;
+	border-bottom-left-radius: 10px; 
+	color: white;
+}
+
+.edit label{
+	padding: 10px
+}
+
+
+
+
+
+
+
+
+
+
+.navs > div{
+	text-decoration:none;
+	color:#002045;
+	width:80%;
+	padding: 5px 5px;
+margin-bottom: 10px
+}
+.navs > div:hover{
+	background:#d4d4d4;
+	cursor: pointer
+}
+.wrapper {
+	/* Center wrapper perfectly */
+	width: 300px;
+	height: 400px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-left: -150px;
+	margin-top: -200px;
+}
+.wrapper_profile {
+	width: 1040px;
+	position: relative;
+	margin:0px auto;
+margin-top: 60px;
+}
+.navs{
+	width: 180px;
+	padding: 10px
+}
+
+.div_photo{
+	background: #fff;
+}
+.wrapper_profile > div{
+	float: left;
+}.profile{
+	width: 799px
+}
+.profile  >div{
+	float: left;
+}
+.profile .profile_data{
+	width: 240px;
+	border:1px solid #91caff;
+	margin-right: 20px
+}
+.photo_container{
+	width: 200px;
+	height: 300px;
+	padding: 20px
+}
+.photo{
+	width: 200px;
+	height: 300px;
+}
+.profile_all_data{
+	width: 520px
+}
+.main_data{
+	width: 480px;
+	padding: 20px
+}
+
+/*
+.gradient {
+	width: 600px;
+	height: 600px;
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	margin-left: -300px;
+	margin-top: -300px;
+	
+	background: url(../images/gradient.png) no-repeat;
+}
+*/
+
+.gradient {
+	/* Center Positioning */
+	width: 600px;
+	height: 600px;
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	margin-left: -300px;
+	margin-top: -300px;
+	
+	/* Fallback */ 
+	background-image: url(../images/gradient.png); 
+	background-repeat: no-repeat; 
+	
+	/* CSS3 Gradient */
+	background-image: -webkit-gradient(radial, 0% 0%, 0% 100%, from(rgba(213,246,255,1)), to(rgba(213,246,255,0)));
+	background-image: -webkit-radial-gradient(50% 50%, 40% 40%, rgba(213,246,255,1), rgba(213,246,255,0));
+	background-image: -moz-radial-gradient(50% 50%, 50% 50%, rgba(213,246,255,1), rgba(213,246,255,0));
+	background-image: -ms-radial-gradient(50% 50%, 50% 50%, rgba(213,246,255,1), rgba(213,246,255,0));
+	background-image: -o-radial-gradient(50% 50%, 50% 50%, rgba(213,246,255,1), rgba(213,246,255,0));
+}
+
+/*******************
+LOGIN FORM
+*******************/
+
+.login-form,
+.registration-form {
+	width: 300px;
+	margin: 0 auto;
+	position: relative;
+	z-index:5;
+	
+	background: #f3f3f3;
+	border: 1px solid #fff;
+	border-radius: 5px;
+	
+	box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+	-moz-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+	-webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+}
+
+/*******************
+HEADER
+*******************/
+
+.login-form .header,
+.registration-form .header{
+	padding: 40px 30px 30px 30px;
+}
+
+.login-form .header h1 ,
+.registration-form .header h1{
+	font-family: 'Bree Serif', serif;
+	font-weight: 300;
+	font-size: 28px;
+	line-height:34px;
+	color: #414848;
+	text-shadow: 1px 1px 0 rgba(256,256,256,1.0);
+	margin-bottom: 10px;
+}
+
+.login-form .header span ,
+.registration-form .header span{
+	font-size: 11px;
+	line-height: 16px;
+	color: #678889;
+	text-shadow: 1px 1px 0 rgba(256,256,256,1.0);
+}
+
+/*******************
+CONTENT
+*******************/
+
+.login-form .content ,
+.registration-form .content{
+	padding: 0 30px 25px 30px;
+}
+
+/* Input field */
+.login-form .content .input,
+.registration-form .content .input {
+	width: 188px;
+	padding: 15px 25px;
+	
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-weight: 400;
+	font-size: 14px;
+	color: #9d9e9e;
+	text-shadow: 1px 1px 0 rgba(256,256,256,1.0);
+	
+	background: #fff;
+	border: 1px solid #fff;
+	border-radius: 5px;
+	
+	box-shadow: inset 0 1px 3px rgba(0,0,0,0.50);
+	-moz-box-shadow: inset 0 1px 3px rgba(0,0,0,0.50);
+	-webkit-box-shadow: inset 0 1px 3px rgba(0,0,0,0.50);
+}
+
+/* Second input field */
+.login-form .content .password, .login-form .content .pass-icon {
+	margin-top: 25px;
+}
+
+.login-form .content .input:hover 
+.registration-form .content .input:hover {
+	background: #dfe9ec;
+	color: #414848;
+}
+
+.login-form .content .input:focus,
+.registration-form .content .input:focus {
+	background: #dfe9ec;
+	color: #414848;
+	
+	box-shadow: inset 0 1px 2px rgba(0,0,0,0.25);
+	-moz-box-shadow: inset 0 1px 2px rgba(0,0,0,0.25);
+	-webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,0.25);
+}
+
+.user-icon, .pass-icon {
+	width: 46px;
+	height: 47px;
+	display: block;
+	position: absolute;
+	left: 0px;
+	padding-right: 2px;
+	z-index: 3;
+	
+	-moz-border-radius-topleft: 5px;
+	-moz-border-radius-bottomleft: 5px;
+	-webkit-border-top-left-radius: 5px;
+	-webkit-border-bottom-left-radius: 5px;
+}
+
+.user-icon {
+	top:147px; /* Positioning fix for slide-in, got lazy to think up of simpler method. */
+	background: rgba(65,72,72,0.75) url(../images/user-icon.png) no-repeat center;	
+}
+
+.pass-icon {
+	top:221px;
+	background: rgba(65,72,72,0.75) url(../images/pass-icon.png) no-repeat center;
+}
+
+/* Animation */
+.input, .user-icon, .pass-icon, .button, .register {
+	transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	-o-transition: all 0.5s;
+	-ms-transition: all 0.5s;
+	outline:none;
+}
+
+/*******************
+FOOTER
+*******************/
+.login-form .footer,
+.registration-form .footer{
+	padding: 25px 30px 40px 30px;
+	overflow: auto;
+	
+	background: #d4dedf;
+	border-top: 1px solid #fff;
+	
+	box-shadow: inset 0 1px 0 rgba(0,0,0,0.15);
+	-moz-box-shadow: inset 0 1px 0 rgba(0,0,0,0.15);
+	-webkit-box-shadow: inset 0 1px 0 rgba(0,0,0,0.15);
+}
+
+/* Login button */
+.login-form .footer .button,
+.registration-form .footer .button,
+.registration-form .footer .button_back{
+	float:right;
+	padding: 9px 20px;
+	
+	font-family: 'Bree Serif', serif;
+	font-weight: 300;
+	font-size: 18px;
+	color: #fff;
+	text-shadow: 0px 1px 0 rgba(0,0,0,0.25);
+	
+	background: #56c2e1;
+	border: 1px solid #46b3d3;
+	border-radius: 5px;
+	cursor: pointer;
+	
+	box-shadow: inset 0 0 2px rgba(256,256,256,0.75);
+	-moz-box-shadow: inset 0 0 2px rgba(256,256,256,0.75);
+	-webkit-box-shadow: inset 0 0 2px rgba(256,256,256,0.75);
+}
+
+.login-form .footer .button:hover,
+.registration-form .footer .button:hover,
+.registration-form .footer .button_back:hover{
+	background: #3f9db8;
+	border: 1px solid rgba(256,256,256,0.75);
+	
+	box-shadow: inset 0 1px 3px rgba(0,0,0,0.5);
+	-moz-box-shadow: inset 0 1px 3px rgba(0,0,0,0.5);
+	-webkit-box-shadow: inset 0 1px 3px rgba(0,0,0,0.5);
+}
+
+.login-form .footer .button:focus,
+.registration-form .footer .button:focus,
+.registration-form .footer .button_back:focus{
+	position: relative;
+	bottom: -1px;
+	
+	background: #56c2e1;
+	
+	box-shadow: inset 0 1px 6px rgba(256,256,256,0.75);
+	-moz-box-shadow: inset 0 1px 6px rgba(256,256,256,0.75);
+	-webkit-box-shadow: inset 0 1px 6px rgba(256,256,256,0.75);
+}
+
+/* Register button */
+.login-form .footer .register {
+	display: block;
+	float: right;
+	padding: 10px 5px 10px 0;
+	margin-right: 20px;
+	
+	background: none;
+	border: none;
+	cursor: pointer;
+	
+	font-family: 'Bree Serif', serif;
+	font-weight: 300;
+	font-size: 18px;
+	color: #414848;
+	text-shadow: 0px 1px 0 rgba(256,256,256,0.5);
+}
+.registration-form .footer input{
+	float:left;
+}
+.login-form .footer .register:hover {
+	color: #3f9db8;
+}
+
+.login-form .footer .register:focus {
+	position: relative;
+	bottom: -1px;
+}
+
+/* Стили бара vladmaxi, можно удалить */
+.vladmaxi-top{
+	line-height: 24px;
+	font-size: 11px;
+	background: #eee;
+	text-transform: uppercase;
+	z-index: 9999;
+	position: fixed;
+	top:0;
+	left:0;
+	width:100%;
+	font-family: calibri;
+	font-size: 13px;
+	box-shadow: 1px 0px 2px rgba(0,0,0,0.2);
+	-webkit-animation: slideOut 0.5s ease-in-out 0.3s backwards;
+}
+@-webkit-keyframes slideOut{
+	0%{top:-30px; opacity: 0;}
+	100%{top:0px; opacity: 1;}
+}
+
+.vladmaxi-top a{
+	padding: 0px 10px;
+	letter-spacing: 1px;
+	color: #333;
+	text-shadow: 0px 1px 1px #fff;
+	display: block;
+	float: left;
+}
+.vladmaxi-top a:hover{
+	background: #fff;
+}
+.vladmaxi-top span.right{
+	float: right;
+}
+.vladmaxi-top span.right a{
+	float: left;
+	display: block;
+}
+/*
+albums
+*/
+.navs > div{
+	text-decoration:none;
+	width:80%;
+	padding: 5px 5px	
+}
+.albums{
+	padding: 20px;
+	width: 95%
+}
+.button_add{
+	background: #b1c7e0;
+	padding: 5px;
+	border-radius: 4px;
+	color: #417aba;
+}
+.button_add:hover{
+	background: #cde1f7;
+}
+.my_albums input:focus{
+	border: #08315e;
+	box-shadow: inset 0 1px 6px rgba(256,256,256,0.75);
+-moz-box-shadow: inset 0 1px 6px rgba(256,256,256,0.75);
+-webkit-box-shadow: inset 0 1px 6px rgba(256,256,256,0.75);
+}
+.head_moduls{
+	width: 100%;
+	padding: 20px;
+	background: #3674ba;
+	box-sizing: border-box;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	color: white;
+}
+.modals,
+.modals_photo{
+	top: 20%;
+	left: 37%;
+	right: 30%;
+	width: 500px;
+	background: white;
+	box-shadow: 1px 1px 4px black;
+	position: absolute;
+	z-index: 1005;
+	border-radius: 10px
+}
+.content_moduls{
+	width: 98.9%;
+	padding: 20px;
+}
+.content_moduls input{
+	width: 93%
+}
+#text_modal:focus{
+	outline: none;
+}
+.footer_modal{
+	border-top: 1px solid #092a4f;
+	padding: 20px;	
+}
+.footer_modal .reset_modal{
+	margin-left:  51%;	
+}
+.footer_modal input{
+	padding: 10px 15px;	
+}
+.plus_photo{
+	width: 200px;
+	height: 220px;
+	border: 1px solid red;
+	border-radius: 20px;
+	display: inline-block;
+	margin-right: 20px;
+	position: relative;
+	margin-top: 20px;
+}
+.plus_photo:nth-child(3n){
+	width: 237px;
+	margin-right: 0px;
+}
+ p{position: absolute;
+	width: 225px;
+	height: 200px;
+	margin-left: auto;
+	margin-right: auto;
+	border: 1px solid blue;
+	word-wrap: break-word;
+	margin-top: -16px;
+}
+.removs{
+	position: absolute;
+	top:8px;
+	right:0px;
+	padding: 5px 10px;
+	
+	border-radius: 10px;
+}
+.close_photo{
+padding:10px; border-radius:10px;color:white; background:rgba(0,0,0,0.3); position: absolute;z-index: 1004; right:-41px; top:0px; outline:none
+}
+
+/*
+	footer
+*/
+
+
+.edit input{
+	border-bottom: 1px solid blue;
+}
