@@ -1,0 +1,143 @@
+
+		.pointing {
+			
+		background-color: red;
+		padding:50px;
+		margin:50px;
+		position: absolute;
+		left: 150px;
+		top: 700px;
+		transition-property: top, transform,border;
+		transition-duration: 4s;
+		border: 2px solid #FF6666;
+		
+		
+		
+		
+ }
+	
+			.figure1 {
+				
+				 width: 120px;
+				 height: 120px;
+				 background: #FFCCCC;
+				 position: absolute;
+				 left: 150px;
+				 top: 5px;
+				 border: 5px solid #2F3841;
+				 transition-property: background;
+				 transition-duration: 2s;
+				 transition: 2s;
+	
+			}
+			
+		
+		.pointing:hover {
+			background: #FF6666;
+		}
+	
+	.pointing:hover + .figure1 {		
+		top:200px;
+		
+		transform: rotate(45deg) /* scale(0.3) */;;
+		
+	}
+	
+
+		.click {
+		background-color: yellow;
+		padding:50px;
+		margin:50px;
+		position: absolute;
+		left: 500px;
+		top: 700px;
+		transition-property: top, transform,border;
+		transition-duration: 4s;
+		border: 2px solid #FFFF99;
+		
+		
+		
+		
+ }
+ 
+			.figure2 {
+				 width: 120px;
+				 height: 120px;
+				 background: #FFFFCC;
+				 position: absolute;
+				 left: 500px;
+				 top: 5px;
+				 border: 5px solid #2F3841;
+				 transition-property: background;
+				 transition-duration: 2s;
+				 transition: 2s;
+			}
+			
+			.click:active {
+			background: #FFFF99;
+		}	
+		
+		.click:active + .figure2 {		
+		top:200px;
+		
+		transform: translateY(-70) ;;
+		
+	}
+
+
+	
+
+		.motion {
+		background-color: blue;
+		padding:50px;
+		margin:50px;
+		position: absolute;
+		left: 850px;
+		top: 700px;
+		transition-property: right, transform,border;
+		transition-duration: 4s;
+		border: 2px solid #99FFFF;
+		
+ }
+
+			.figure3 {
+				 width: 120px;
+				 height: 120px;
+				 background: #99CCFF;
+				 position: absolute;
+				 left: 850px;
+				 top: 5px;
+				 border: 5px solid #2F3841;
+				 transition-property: background;
+				 transition-duration: 2s;
+				 transition: 2s;
+			}
+ 
+
+			.motion:active {
+			background: #99FFFF;
+		}	
+		
+		
+		.motion:active + .figure3 {		
+		
+		/* top:200px; */
+		
+		transform:translateX(120px);
+		
+	}
+
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
